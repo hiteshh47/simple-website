@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Webpage</title>
+    </head>
+    <body>
+        <h1>Canadian Government Official Website</h1>
+        <h3>MOST WANTED LIST</h3>
+		<p> 1. Raman Singh </p>
+		<p> Origin Country: INDIA </p>
+		<p> Crime: Drink and Drive </p>
+		<p> Partner in Crime: Jameson </p>
+    </body>
+
+    <img src="https://s3.amazonaws.com/hitesh.click/raman.PNG" width=500/>
+
+    <!-- CORS demo -->
+    <div id="tofetch"/>
+    <script>
+        var tofetch = document.getElementById("tofetch");
+
+        fetch('http://h-bucket-47-2.s3-website-us-east-1.amazonaws.com/extra-page.html')
+        .then((response) => { 
+            return response.text();
+        })
+        .then((html) => {
+            tofetch.innerHTML = html     
+        });
+    </script>
+</html>
